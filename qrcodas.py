@@ -1,5 +1,7 @@
 from tkinter import *
 import pyqrcode
+from tkinter import messagebox
+
 
 langas = Tk()
 langas.title("QR kodo generatorius")
@@ -11,7 +13,7 @@ def sukurti():
         qr = pyqrcode.create(objektas.get())
         nuotrauka = BitmapImage(data=qr.xbm(scale=8))
     else:
-        print("Iveskite eilute, kuri bus paversta QR kodu")
+        messagebox.showerror('Klaida', 'Iveskite eilute, kuri bus paversta QR kodu')
     try:
         rodyti()
     except:
