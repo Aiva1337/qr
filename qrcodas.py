@@ -12,7 +12,7 @@ def sukurti():
         qr = pyqrcode.create(objektas.get())
         nuotrauka = BitmapImage(data=qr.xbm(scale=8))
     else:
-        messagebox.showinfo("Iveskite eilute, kuri bus paversta QR kodu")
+        print("Iveskite eilute, kuri bus paversta QR kodu")
     try:
         rodyti()
     except:
